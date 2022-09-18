@@ -4,18 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    TextView msg;
+public class MainActivity extends AppCompatActivity
+{
+    EditText nome;
+    TextView resposta;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        msg = (TextView) findViewById(R.id.mensagem);
+        nome = (EditText) findViewById(R.id.txtNomeId);
+        resposta = (TextView) findViewById(R.id.txtRespostaId);
     }
 
-    public void clicou(View view) {
-        msg.setText("Ola mundo!");
+    public void precionado(View view)
+    {
+        String nomeDoCliente = nome.getText().toString();
+        String frase = "E um prazer te conhecer " + nomeDoCliente + " !!";
+        resposta.setText(frase);
     }
 }

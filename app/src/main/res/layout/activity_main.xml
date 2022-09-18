@@ -7,28 +7,51 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/mensagem"
+        android:id="@+id/txtDigiteId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aperte o Botão"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginTop="32dp"
+        android:text="Digite seu nome:"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/txtNomeId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:onClick="clicou"
-        android:text="Button"
+        android:ems="10"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDigiteId"
+        app:layout_constraintVertical_bias="0.031" />
 
+    <Button
+        android:id="@+id/btnProntoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="precionado"
+        android:text="PRONTO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeId"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/txtRespostaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resposta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProntoId"
+        app:layout_constraintVertical_bias="0.044" />
 </androidx.constraintlayout.widget.ConstraintLayout>
